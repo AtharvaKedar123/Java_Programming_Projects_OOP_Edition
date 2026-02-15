@@ -13,9 +13,9 @@ All projects are **completed**, demonstrating practical applications of Java, cl
 
 ## Table of Contents
 - [Projects](#projects)
-- [Technologies Used](#technologies-used)
 - [Java Skills & Concepts](#java-skills--concepts)
 - [Features](#features)
+- [Technologies Used](#technologies-used)
 - [Contact](#contact)
 - [Installation](#installation)
 
