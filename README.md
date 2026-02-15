@@ -85,6 +85,10 @@ cd java-projects-portfolio/<Project_Name>
 javac *.java
 
 # Run the main Java class
+java Main  # replace Main with the main class containing public static void main(String[] args)
+
+
+# Run the main Java class
 java Main  # replace Main with your main class name
 
 
