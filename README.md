@@ -75,6 +75,9 @@ All projects are **completed**, demonstrating practical applications of Java, cl
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/java-oop-projects.git
-cd java-oop-projects
+git clone https://github.com/AtharvaKedar123/java-projects-portfolio.git
+cd java-projects-portfolio/<project-folder>
+javac *.java
+java Main  # replace Main with the main class name
+
 
