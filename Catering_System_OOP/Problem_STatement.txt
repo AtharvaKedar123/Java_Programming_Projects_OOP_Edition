@@ -1,0 +1,237 @@
+# Question 1: Object Oriented Programming (10 Marks)
+
+A catering service company wants to automate its service booking process based on various parameters.  
+Implement the class diagram given below to achieve the same.
+
+---
+
+## Class Diagram
+
+                 ┌──────────────────────────┐
+                 │        BookCatering      │
+                 ├──────────────────────────┤
+                 │ - availableCuisineArr[]  │ <<static>>
+                 │ - customerName : String  │
+                 │ - cuisine : String       │
+                 ├──────────────────────────┤
+                 │ + BookCatering(name,cui) │
+                 │ + validateCustomer():boolean │
+                 │ + validateCuisine():boolean  │
+                 └──────────────────────────┘
+                          ▲
+                          ◇
+                          │
+          ┌──────────────────────────────────┐
+          │           Caterer (abstract)     │
+          ├──────────────────────────────────┤
+          │ - counter : int                  │ <<static>>
+          │ - bookCatering : BookCatering   │
+          │ - noOfPlates : int               │
+          │ - billAmount : double            │
+          │ - bookingID : String             │
+          ├──────────────────────────────────┤
+          │ + Caterer(bookCatering,noOfPlates) │
+          │ + getBookCatering()              │
+          │ + getNoOfPlates()                │
+          │ + getBillAmount()                │
+          │ + setBillAmount(double)          │
+          │ + getBookingID()                 │
+          │ + setBookingID(String)           │
+          │ + identifyDiscountPercentage(double):int │
+          │ + generateBookingID()            │
+          │ + findCostPerPlate():int         │
+          │ + calculateBillAmount():void     │ <<abstract>>
+          └──────────────────────────────────┘
+                          ▲
+                          │
+          ┌──────────────────────────────────┐
+          │        WeddingCaterer             │
+          ├──────────────────────────────────┤
+          │ - noOfDays : int                  │
+          │ - serviceType : String            │
+          ├──────────────────────────────────┤
+          │ + calculateBillAmount():void      │
+          └──────────────────────────────────┘
+
+
+### Caterer (Abstract Class)
+
+#### Attributes
+- `counter : int` (static)
+- `bookCatering : BookCatering`
+- `noOfPlates : int`
+- `billAmount : double`
+- `bookingID : String`
+
+Implementation Status
+Class Name	Status
+Caterer 	Partially Implemented
+WeddingCaterer	Partially Implemented
+BookCatering	Partially Implemented
+
+
+
+#### Constructor
+- `Caterer(bookCatering : BookCatering, noOfPlates : int)`
+
+#### Methods
+- `getBookCatering() : BookCatering`
+- `getNoOfPlates() : int`
+- `getBillAmount() : double`
+- `setBillAmount(billAmount : double) : void`
+- `getBookingID() : String`
+- `setBookingID(bookingID : String) : void`
+- `identifyDiscountPercentage(cost : double) : int`
+- `generateBookingID() : void`
+- `findCostPerPlate() : int`
+- `calculateBillAmount() : void` (abstract)
+
+---
+
+### BookCatering Class
+
+#### Attributes
+- `availableCuisineArr : String[]` (static)
+- `customerName : String`
+- `cuisine : String`
+
+#### Constructor
+- `BookCatering(customerName : String, cuisine : String)`
+
+#### Methods
+- `validateCustomer() : boolean`
+- `validateCuisine() : boolean`
+
+---
+
+### WeddingCaterer Class (Inherits Caterer)
+
+#### Attributes
+- `noOfDays : int`
+- `serviceType : String`
+
+---
+
+## Initialization Details
+
+### availableCuisineArr
+```java
+{"indian", "italian", "chinese"}
+
+Notes
+
+    This array is already supplied, no need to code it
+    Do not change the case of the elements in the array
+
+Method Specifications
+validateCustomer()
+
+    Checks if the customerName length is greater than or equal to 3
+
+    Returns true if valid
+
+    Otherwise, returns false
+
+validateCuisine()
+
+    Checks whether the requested cuisine is present in availableCuisineArr
+
+    Perform case-insensitive comparison
+
+    If present, return true
+
+    Otherwise, return false
+
+Example
+
+If cuisine is "Indian", the method should return true
+generateBookingID()
+
+    Auto-generates and sets the bookingID
+
+    The bookingID must be:
+
+        Prefixed with "C" (uppercase)
+
+        Followed by an auto-generated number starting from 1001
+
+    Each subsequent booking ID must be incremented by 1
+
+    Use a static variable counter to implement this logic
+
+Example
+
+    First booking ID → C1001
+
+    Second booking ID → C1002
+
+findCostPerPlate()
+
+This method finds and returns the costPerPlate (int) based on the noOfPlates requested.
+No. of Plates	Cost Per Plate
+Less than 25	-1
+25 to 100 (inclusive)	300
+101 to 200 (inclusive)	200
+Greater than 200	150
+Example
+
+If the customer requests 280 plates, cost per plate = 150
+calculateBillAmount() (WeddingCaterer)
+Validation Conditions
+
+    validateCustomer() must return true
+
+    validateCuisine() must return true
+
+    noOfDays must be >= 1
+
+    costPerPlate must not be -1
+
+Billing Logic
+
+    Generate bookingID
+
+    Calculate:
+
+    basicCost = costPerPlate × noOfPlates
+
+    Identify discount percentage using:
+
+    identifyDiscountPercentage(basicCost)
+
+    Apply discount:
+
+    basicCost = basicCost - (basicCost × discountPercentage / 100)
+
+    If serviceType is "Buffet":
+
+        Add 5000 to basicCost
+
+    Final bill amount:
+
+    billAmount = basicCost × noOfDays
+
+Invalid Scenario
+
+If any validation fails:
+
+    Set bookingID to "-1"
+
+    Set billAmount to -1.0
+
+Additional Instructions
+
+    Do not add any extra instance or static variables
+
+    Do not add any extra methods
+
+    Case-insensitive comparison must be done unless explicitly stated
+
+    Do not change names or cases of the given variables
+
+    In derived class constructors:
+
+        Pass base class variables first
+
+        Then derived class variables
+
