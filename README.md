@@ -75,8 +75,17 @@ All projects are **completed**, demonstrating practical applications of Java, cl
 Clone the repository:
 
 ```bash
-git clone https://github.com/AtharvaKedar123/java-projects-portfolio.git && cd java-projects-portfolio/<project-folder> && javac *.java && java Main
+# Clone the repository
+git clone https://github.com/AtharvaKedar123/java-projects-portfolio.git
 
-Replace <project-folder> with the project name (e.g., PlaneTicketBookingSystem) and Main with the main class containing public static void main(String[] args).
+# Navigate to the project folder
+cd java-projects-portfolio/<Project_Name>
+
+# Compile all Java files
+javac *.java
+
+# Run the main Java class
+java Main  # replace Main with your main class name
+
 
 
