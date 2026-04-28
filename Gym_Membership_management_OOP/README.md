@@ -1,11 +1,29 @@
-# Gym Membership Management System
+# Gym_Membership_management_OOP 🏋️
 
 ## 📌 Overview
-Manages members, subscriptions, and payments.
+Manages gym memberships, subscriptions, and member details.
+
+---
 
 ## 🎯 Features
-- Member registration
-- Plan management
+- Membership plans
+- Member tracking
+- Payment handling
 
-## 📍 Use Case
-Fitness centers
+---
+
+## 🧱 System Design
+- `Member`
+- `MembershipPlan`
+- `Gym`
+
+---
+
+## 🧠 Concepts Used
+- OOP abstraction
+- Data encapsulation
+
+---
+
+## 📍 Learning Outcome
+- Subscription-based system modeling
