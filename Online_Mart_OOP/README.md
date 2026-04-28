@@ -1,11 +1,33 @@
-# Online Mart System
+# Online_Mart_OOP 🛒
 
 ## 📌 Overview
-Simulates online shopping platform.
+An e-commerce system handling products, users, and orders.
+
+---
 
 ## 🎯 Features
-- Browse products
-- Checkout system
+- Product catalog
+- Shopping cart
+- Order management
 
-## 📍 Use Case
-E-commerce platforms
+---
+
+## 🧱 System Design
+- `Product`
+- `Cart`
+- `Order`
+
+---
+
+## 🧠 Concepts Used
+- OOP + data flow
+
+---
+
+## 📍 Learning Outcome
+- E-commerce architecture
+
+---
+
+## 🚀 Resume Value
+⭐ EXTREMELY HIGH
