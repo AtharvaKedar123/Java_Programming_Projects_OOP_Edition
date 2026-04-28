@@ -1,12 +1,29 @@
-# Clinic Appointment & Fee System
+# Clinic_Appointment_Fee_System_OOP 🏥
 
 ## 📌 Overview
-Manages appointments and billing in a clinic.
+Handles patient appointments and fee calculations in a clinic.
+
+---
 
 ## 🎯 Features
-- Book appointments
+- Appointment scheduling
 - Fee calculation
 - Patient records
 
-## 📍 Use Case
-Healthcare clinics
+---
+
+## 🧱 System Design
+- `Patient`
+- `Doctor`
+- `Appointment`
+
+---
+
+## 🧠 Concepts Used
+- OOP relationships
+- Real-world modeling
+
+---
+
+## 📍 Learning Outcome
+- Healthcare system design
