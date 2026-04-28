@@ -1,11 +1,29 @@
-# Movie Ticket Booking System
+# Movie_Ticket_System+OOP 🎬
 
 ## 📌 Overview
-Manages ticket booking and seat allocation.
+Manages movie ticket booking including seat selection and pricing.
+
+---
 
 ## 🎯 Features
-- Book tickets
-- Seat selection
+- Movie listing
+- Seat booking
+- Ticket generation
 
-## 📍 Use Case
-Cinema booking systems
+---
+
+## 🧱 System Design
+- `Movie`
+- `Theatre`
+- `Ticket`
+
+---
+
+## 🧠 Concepts Used
+- OOP design
+- Resource allocation
+
+---
+
+## 📍 Learning Outcome
+- Booking system logic
