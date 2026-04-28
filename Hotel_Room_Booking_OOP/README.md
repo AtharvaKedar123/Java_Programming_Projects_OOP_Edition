@@ -1,11 +1,34 @@
-# Hotel Room Booking System
+# Hotel_Room_Booking_OOP 🏨
 
 ## 📌 Overview
-Handles room booking and customer check-ins.
+Handles hotel room reservations, availability, and booking management.
+
+---
 
 ## 🎯 Features
-- Book rooms
-- Manage availability
+- Room availability tracking
+- Booking system
+- Customer management
 
-## 📍 Use Case
-Hotel systems
+---
+
+## 🧱 System Design
+- `Room`
+- `Booking`
+- `Customer`
+
+---
+
+## 🧠 Concepts Used
+- State management
+- OOP modeling
+
+---
+
+## 📍 Learning Outcome
+- Reservation system design
+
+---
+
+## 🚀 Resume Value
+⭐ VERY HIGH — Industry-relevant
