@@ -1,11 +1,16 @@
-# Plane Ticket Booking System
+# Plane_Ticket_Booking_OOP ✈️
 
 ## 📌 Overview
-Handles airline ticket booking.
+Handles flight booking, seat allocation, and passenger management.
+
+---
 
 ## 🎯 Features
-- Book tickets
-- Manage passengers
+- Flight scheduling
+- Ticket booking
+- Passenger tracking
 
-## 📍 Use Case
-Airline systems
+---
+
+## 📍 Learning Outcome
+- Transport system modeling
