@@ -1,12 +1,37 @@
-# Advertisement Agency System
+# Advertisement_Agency_OOP 📢
 
 ## 📌 Overview
-Manages ad campaigns, clients, and marketing operations.
+A system that manages advertisement campaigns, clients, and billing operations for an advertising agency.
+
+---
 
 ## 🎯 Features
-- Campaign creation
 - Client management
-- Budget tracking
+- Campaign creation and tracking
+- Budget allocation
+- Billing and invoicing
 
-## 📍 Use Case
-Marketing agencies
+---
+
+## 🧱 System Design
+- `Client` → Stores client details
+- `Campaign` → Tracks ad campaigns
+- `Agency` → Manages operations
+
+---
+
+## 🧠 Concepts Used
+- OOP (Encapsulation, Abstraction)
+- Class relationships
+- Data modeling
+
+---
+
+## 📍 Learning Outcome
+- Designing business-oriented systems
+- Managing multi-entity relationships
+
+---
+
+## 🚀 Resume Value
+⭐ VERY HIGH — Business system design
