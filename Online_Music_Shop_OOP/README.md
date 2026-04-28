@@ -1,11 +1,15 @@
-# Online Music Shop
+# Online_Music_Shop_OOP 🎵
 
 ## 📌 Overview
-Manages music catalog and purchases.
+Manages digital music purchases and catalog browsing.
+
+---
 
 ## 🎯 Features
-- Browse songs
-- Purchase music
+- Song catalog
+- Purchase system
 
-## 📍 Use Case
-Music platforms
+---
+
+## 📍 Learning Outcome
+- Digital product system design
