@@ -1,12 +1,29 @@
-# Catering System
+# Catering_System_OOP 🍽
 
 ## 📌 Overview
-Handles food orders, event catering, and menu management.
+Manages catering orders, menus, and customer bookings.
+
+---
 
 ## 🎯 Features
-- Event booking
-- Menu selection
-- Order tracking
+- Order placement
+- Menu management
+- Billing system
 
-## 📍 Use Case
-Catering services
+---
+
+## 🧱 System Design
+- `Menu` → Available items
+- `Order` → Customer orders
+- `Customer` → Client details
+
+---
+
+## 🧠 Concepts Used
+- OOP modeling
+- Data handling
+
+---
+
+## 📍 Learning Outcome
+- Service-based system design
