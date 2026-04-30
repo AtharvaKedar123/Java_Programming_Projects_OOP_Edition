@@ -1,0 +1,182 @@
+**Practice Problem 2: Digital Twin Factory Simulator**
+
+---
+
+**1. Problem Statement**
+
+Design and implement a **Digital Twin Factory Simulator** using object-oriented programming concepts.
+
+* A factory consists of multiple machines working together in a production line.
+* Each machine operates and may fail based on a given probability.
+* Failed machines must be repaired by a technician.
+* The system must simulate machine operations, failures, and repairs by strictly following the rules described in this problem.
+
+---
+
+###### **2. Class Diagram**
+
+```
+                   ----------------------------------
+                   |           Machine              |
+                   ----------------------------------
+                   | - machineId : String           |
+                   | - machineName : String         |
+                   | - status : String              |
+                   | - failureChance : double       |
+                   ----------------------------------
+                   | + operate() : boolean          |
+                   | + fail() : void               |
+                   | + repair() : void             |
+                   | + getStatus() : String        |
+                   ----------------------------------
+                                  ▲
+                                  |  HAS-A
+                                  ◇
+                   ----------------------------------
+                   |        ProductionLine           |
+                   ----------------------------------
+                   | - lineId : String              |
+                   | - machines : Machine[]         |
+                   ----------------------------------
+                   | + runLine() : void             |
+                   | + getMachines() : Machine[]    |
+                   ----------------------------------
+                                  ▲
+                                  |
+                   ----------------------------------
+                   |           Factory               |
+                   ----------------------------------
+                   | - factoryName : String         |
+                   | - productionLine              |
+                   | - technician                  |
+                   ----------------------------------
+                   | + startSimulation() : void     |
+                   | + scheduleMaintenance() : void |
+                   ----------------------------------
+                                  ▲
+                                  |
+                   ----------------------------------
+                   |         Technician             |
+                   ----------------------------------
+                   | - technicianName : String     |
+                   | - specialization : String     |
+                   ----------------------------------
+                   | + repairMachine(Machine)      |
+                   ----------------------------------
+```
+
+---
+
+### **3. Explanation of Relationships**
+
+* Machine IS PART OF ProductionLine
+  → This is **Aggregation (HAS-A)**
+
+* ProductionLine IS PART OF Factory
+  → This is **Aggregation (HAS-A)**
+
+* Technician interacts with Machine
+  → This represents **association**
+
+---
+
+### **4. Implementation Status**
+
+| Class Name     | Implementation Status |
+| -------------- | --------------------- |
+| Machine        | Partially implemented |
+| ProductionLine | Partially implemented |
+| Factory        | Partially implemented |
+| Technician     | Partially implemented |
+
+---
+
+### **5. Static / Initial Data**
+
+* Each machine starts with:
+
+```
+status = "WORKING"
+```
+
+* Failure chance is provided during object creation.
+
+---
+
+### **6. Implementation Details**
+
+###### **i. Machine Class**
+
+**Method: operate()**
+
+* Simulates machine operation
+* Uses failureChance to determine failure
+* Returns true if working
+* Returns false if failure occurs
+
+---
+
+**Method: fail()**
+
+* Sets machine status to `"FAILED"`
+
+---
+
+**Method: repair()**
+
+* Sets machine status to `"WORKING"`
+
+---
+
+###### **ii. ProductionLine Class**
+
+**Method: runLine()**
+
+* Iterates through all machines
+* Calls operate() on each machine
+* If a machine fails → call fail()
+
+---
+
+###### **iii. Technician Class**
+
+**Method: repairMachine(Machine machine)**
+
+* Checks if machine status is `"FAILED"`
+* Repairs the machine using repair()
+
+---
+
+###### **iv. Factory Class**
+
+**Method: startSimulation()**
+
+* Starts the production line
+* Displays machine status
+
+---
+
+**Method: scheduleMaintenance()**
+
+* Identifies failed machines
+* Uses technician to repair them
+
+---
+
+### **7. Sample Test Case**
+
+**Input**
+
+* Machine1 → failureChance = 0.2
+* Machine2 → failureChance = 0.5
+* Machine3 → failureChance = 0.1
+
+---
+
+**Expected Output (Example)**
+
+* Machine1 → WORKING
+* Machine2 → FAILED → REPAIRED
+* Machine3 → WORKING
+
+---
