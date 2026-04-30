@@ -1,0 +1,103 @@
+# Question 1: Object Oriented Programming
+
+A smart city wants to automate its traffic signal system based on real-time road traffic density.
+
+Implement an Object-Oriented Java program to dynamically control traffic signals using sensors.
+
+---
+
+## Class Design
+
+### TrafficSignal
+Represents a traffic light at a road.
+
+Attributes:
+- signalId : String
+- currentColor : String
+- greenTime : int
+
+Methods:
+- updateSignalTime(int vehicleCount)
+- setEmergencyMode()
+- displaySignalStatus()
+
+---
+
+### Road
+Represents a road connected to the traffic junction.
+
+Attributes:
+- roadName : String
+- vehicleCount : int
+- hasEmergencyVehicle : boolean
+
+Methods:
+- getRoadName()
+- getVehicleCount()
+- hasEmergencyVehicle()
+
+---
+
+### Sensor
+Detects vehicle density and emergency vehicles on a road.
+
+Attributes:
+- road : Road
+
+Methods:
+- detectVehicleCount()
+- detectEmergencyVehicle()
+
+---
+
+### TrafficController
+Controls all traffic signals based on sensor data.
+
+Attributes:
+- roads[] : Road
+- signals[] : TrafficSignal
+
+Methods:
+- controlTraffic()
+
+---
+
+## Business Rules
+
+1. If an emergency vehicle is present on a road:
+   - That road immediately gets GREEN signal.
+   - Green time should be 90 seconds.
+
+2. If vehicle count is greater than 100:
+   - Green time should be 60 seconds.
+
+3. If vehicle count is between 50 and 100:
+   - Green time should be 40 seconds.
+
+4. If vehicle count is less than 50:
+   - Green time should be 25 seconds.
+
+5. Display final signal status for every road.
+
+---
+
+## Expected Output
+
+The system should display:
+- Road name
+- Vehicle count
+- Emergency vehicle status
+- Signal color
+- Green signal time
+
+---
+
+## Objective
+
+This project demonstrates:
+- Classes and Objects
+- Encapsulation
+- Constructor usage
+- Array of Objects
+- Real-time decision logic
+- Object-Oriented system design
