@@ -1,7 +1,7 @@
 class Candidate {
     private String candidateId;
     private String candidateName;
-    private String email
+    private String email;
 
     public Candidate(String candidateId, String candidateName, String email) {
         this.candidateId = candidateId;
