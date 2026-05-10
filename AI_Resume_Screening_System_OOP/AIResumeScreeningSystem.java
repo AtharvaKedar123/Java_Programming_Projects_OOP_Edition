@@ -1,5 +1,5 @@
 class Candidate {
-    private String candidateId
+    private String candidateId;
     private String candidateName;
     private String email;
 
