@@ -1,0 +1,119 @@
+1. Go to the project folder
+cd "E:\ALL PROGRAMMING PROJECTS\Bitcoin Project"
+2. Check Java version
+java -version
+3. Check Maven version
+mvn -version
+4. Compile the complete Maven project
+mvn clean compile
+
+Expected result:
+
+BUILD SUCCESS
+5. Run the REST API
+java -cp target/classes AlertApi
+
+Expected output:
+
+REST API running at http://localhost:8080/alerts
+
+Keep this terminal running.
+
+6. Open a second terminal
+
+In the second terminal, again go to the project folder:
+
+cd "E:\ALL PROGRAMMING PROJECTS\Bitcoin Project"
+7. Set the Telegram bot token
+$env:BOT_TOKEN="YOUR_TELEGRAM_BOT_TOKEN"
+
+Do not save the real token in your source code or documentation.
+
+8. Verify the bot token is set
+$env:BOT_TOKEN
+
+If it prints the token, the environment variable is set correctly.
+
+9. Run the Telegram bot
+mvn exec:java "-Dexec.mainClass=BitcoinAlertBot"
+
+Expected output:
+
+Telegram Bitcoin Bot started
+
+Keep this terminal running too.
+
+10. Telegram command — start the bot
+/start
+11. Get current Bitcoin price
+/price
+12. POST operation — create a price alert
+
+Example:
+
+/post 85000
+
+Expected response:
+
+Alert created. ID = 1
+13. GET operation — view all alerts
+/get
+
+Example result:
+
+{1=85000.0}
+14. PUT operation — update an existing alert
+
+Example:
+
+/put 1 90000
+
+Here:
+
+1
+
+is the alert ID, and:
+
+90000
+
+is the new target price.
+
+Expected:
+
+Alert updated
+15. GET again to verify the update
+/get
+
+Example:
+
+{1=90000.0}
+16. DELETE operation — remove the alert
+/delete 1
+
+Expected:
+
+Alert deleted
+17. GET again to verify deletion
+/get
+
+Expected:
+
+{}
+Optional troubleshooting commands
+
+If port 8080 is already occupied:
+
+Get-NetTCPConnection -LocalPort 8080
+
+Check the PID:
+
+Get-NetTCPConnection -LocalPort 8080 | Select-Object OwningProcess
+
+Stop the process:
+
+Stop-Process -Id PID -Force
+
+Replace PID with the actual process number.
+
+
+
